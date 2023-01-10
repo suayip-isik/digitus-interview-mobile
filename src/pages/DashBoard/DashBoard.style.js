@@ -5,7 +5,14 @@ export default StyleSheet.create({
     page: {
         flex: 1,
         backgroundColor: Colors.white,
-        alignItems: 'center',
-        justifyContent: 'center',
+    },
+    story: {
+        flex: 1,
+        backgroundColor: 'lightgray',
+        flexDirection: 'row',
+        paddingVertical: 10,
+    },
+    contenView: {
+        flex: 7.3,
     }
 })
