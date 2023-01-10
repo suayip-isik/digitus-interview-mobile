@@ -8,7 +8,7 @@ import welcomePhotoTwo from '../../assets/Introduction/introduction2.png';
 import welcomePhotoThree from '../../assets/Introduction/introduction3.png';
 
 
-const Welcome = () => {
+const Welcome = ({ navigation }) => {
     const { width, height } = Dimensions.get('window');
 
     const [screenIndex, setScreenIndex] = useState(1)
@@ -16,7 +16,7 @@ const Welcome = () => {
 
     const scroll = () => {
         if (screenIndex >= 3) {
-            return false
+            navigation.navigate('TabNavigatorPage')
         }
         setScreenIndex(screenIndex + 1)
         scrollViewRef.current?.scrollTo({ x: width * screenIndex, y: 0, animated: true }, 3)
