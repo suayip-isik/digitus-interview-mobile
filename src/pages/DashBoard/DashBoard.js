@@ -1,12 +1,12 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, SafeAreaView } from 'react-native'
 import styles from './DashBoard.style';
 
 const DashBoard = () => {
     return (
-        <View>
+        <SafeAreaView style={styles.page}>
             <Text>DashBoard</Text>
-        </View>
+        </SafeAreaView>
     )
 }
 
