@@ -65,7 +65,6 @@ const TabPage = () => {
               flex: 1,
               backgroundColor: Colors.white,
 
-
               shadowColor: "#000",
               shadowOffset: {
                 width: 0,
@@ -75,8 +74,6 @@ const TabPage = () => {
               shadowRadius: 2.22,
 
               elevation: 3,
-
-
             }}>
               <Image style={{ width: 100, height: 50 }} source={DigitusLogo} />
             </View>
