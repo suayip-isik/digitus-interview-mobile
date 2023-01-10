@@ -1,8 +1,11 @@
 import React, { useRef, useState } from 'react'
 import { Image, Pressable, SafeAreaView, Text, View, ScrollView, Dimensions } from 'react-native';
 import styles from './Welcome.style';
+import WelcomePageScrollItem from '../../components/WelcomePageScrollItem/WelcomePageScrollItem';
 import DigitusLogo from '../../assets/DigitusLogos/digitus.png';
-import welcomePhotoOne from '../../assets/Introduction/introduction1.png'
+import welcomePhotoOne from '../../assets/Introduction/introduction1.png';
+import welcomePhotoTwo from '../../assets/Introduction/introduction2.png';
+import welcomePhotoThree from '../../assets/Introduction/introduction3.png';
 
 
 const Welcome = () => {
@@ -12,6 +15,9 @@ const Welcome = () => {
     const scrollViewRef = useRef();
 
     const scroll = () => {
+        if (screenIndex >= 3) {
+            return false
+        }
         setScreenIndex(screenIndex + 1)
         scrollViewRef.current?.scrollTo({ x: width * screenIndex, y: 0, animated: true }, 3)
     }
@@ -28,14 +34,6 @@ const Welcome = () => {
 
                 <View style={{ flex: 5 }}>
 
-                    {/* <Image style={{ height: '50%', width: '100%', resizeMode: 'cover', marginTop: 20, flex: 1 }} source={welcomePhotoOne} />
-
-                    <View style={{ flex: 1, justifyContent: 'center' }}>
-
-                        <Text style={{ color: '#0a8754', fontWeight: 'bold', fontSize: 32, alignSelf: 'center',  }}>Emin ad minim</Text>
-                        <Text style={{ alignSelf: 'center', fontSize: 14, color: '#141d45', width: '80%', lineHeight: 26, textAlign: 'center', paddingTop: 15 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</Text>
-
-                    </View> */}
                     <ScrollView
                         ref={scrollViewRef}
                         showsHorizontalScrollIndicator={false}
@@ -44,27 +42,23 @@ const Welcome = () => {
                         horizontal
                         style={{ flex: 1 }}>
 
-                        <View style={{ width: width }}>
-                            <Image style={{ height: '50%', width: '100%', resizeMode: 'cover', marginTop: 20, flex: 1 }} source={welcomePhotoOne} />
+                        <WelcomePageScrollItem
+                            width={width}
+                            image={welcomePhotoOne}
+                            title={'Emin ad minim'}
+                            description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis'} />
 
-                            <View style={{ flex: 1, justifyContent: 'center' }}>
+                        <WelcomePageScrollItem
+                            width={width}
+                            image={welcomePhotoTwo}
+                            title={'Emin ad minim'}
+                            description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis'} />
 
-                                <Text style={{ color: '#0a8754', fontWeight: 'bold', fontSize: 32, alignSelf: 'center', }}>Emin ad minim</Text>
-                                <Text style={{ alignSelf: 'center', fontSize: 14, color: '#141d45', width: '80%', lineHeight: 26, textAlign: 'center', paddingTop: 15 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</Text>
-
-                            </View>
-                        </View>
-
-                        <View style={{ width: width }}>
-                            <Image style={{ height: '50%', width: '100%', resizeMode: 'cover', marginTop: 20, flex: 1 }} source={welcomePhotoOne} />
-
-                            <View style={{ flex: 1, justifyContent: 'center' }}>
-
-                                <Text style={{ color: '#0a8754', fontWeight: 'bold', fontSize: 32, alignSelf: 'center', }}>Emin ad minim</Text>
-                                <Text style={{ alignSelf: 'center', fontSize: 14, color: '#141d45', width: '80%', lineHeight: 26, textAlign: 'center', paddingTop: 15 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</Text>
-
-                            </View>
-                        </View>
+                        <WelcomePageScrollItem
+                            width={width}
+                            image={welcomePhotoThree}
+                            title={'Emin ad minim'}
+                            description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis'} />
 
                     </ScrollView>
 
@@ -75,9 +69,9 @@ const Welcome = () => {
                 <View style={{ flex: 1 }}>
 
                     <View style={{ alignItems: 'center', justifyContent: 'center', flexDirection: 'row', }}>
-                        <View style={{ width: 9, height: 9, borderRadius: 4.5, backgroundColor: 'gray', marginLeft: 5 }}></View>
-                        <View style={{ width: 9, height: 9, borderRadius: 4.5, backgroundColor: 'lightgray', marginLeft: 5 }}></View>
-                        <View style={{ width: 9, height: 9, borderRadius: 4.5, backgroundColor: 'lightgray', marginLeft: 5 }}></View>
+                        <View style={[{ width: 9, height: 9, borderRadius: 4.5, backgroundColor: 'lightgray', marginLeft: 5 }, screenIndex === 1 ? { backgroundColor: 'gray' } : { backgroundColor: 'lightgray' }]}></View>
+                        <View style={[{ width: 9, height: 9, borderRadius: 4.5, backgroundColor: 'lightgray', marginLeft: 5 }, screenIndex === 2 ? { backgroundColor: 'gray' } : { backgroundColor: 'lightgray' }]}></View>
+                        <View style={[{ width: 9, height: 9, borderRadius: 4.5, backgroundColor: 'lightgray', marginLeft: 5 }, screenIndex === 3 ? { backgroundColor: 'gray' } : { backgroundColor: 'lightgray' }]}></View>
                     </View>
 
                     <View style={{ paddingTop: 30, alignItems: 'center', justifyContent: 'flex-end' }}>
