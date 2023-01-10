@@ -6,8 +6,11 @@ export default StyleSheet.create({
         backgroundColor: '#ffffff',
     },
     logoHeader: {
-        width: '100%',
-        paddingVertical: 30,
-        alignItems: 'center'
-    }
+        alignItems: 'center',
+        justifyContent: 'center',
+        flex: 1.5,
+    },
+    body: {
+        flex: 6,
+    },
 });
