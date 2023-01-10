@@ -8,7 +8,7 @@ export default StyleSheet.create({
     logoHeader: {
         alignItems: 'center',
         justifyContent: 'center',
-        flex: 1.5,
+        flex: 2,
     },
     body: {
         flex: 6,
