@@ -21,7 +21,6 @@ const DashBoard = () => {
         <SafeAreaView style={styles.page}>
 
             <View style={styles.story}>
-
                 <ScrollView style={{ flex: 1 }} horizontal showsHorizontalScrollIndicator={false}>
                     {
                         images.map((val, i) => {
