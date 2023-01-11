@@ -1,7 +1,8 @@
-import React from 'react'
-import { View, ScrollView, SafeAreaView, Image, Pressable } from 'react-native'
+import React, { useState } from 'react'
+import { View, ScrollView, SafeAreaView, Image, Pressable, Text } from 'react-native'
 import Colors from '../../assets/Colors';
 import styles from './DashBoard.style';
+import StoryAvatar from '../../components/StoryAvatar';
 
 import Pp0 from '../../assets/DummyData/Images/pp0.jpg';
 import Pp1 from '../../assets/DummyData/Images/pp1.jpeg';
@@ -13,47 +14,22 @@ import Pp6 from '../../assets/DummyData/Images/pp6.jpg';
 import Pp7 from '../../assets/DummyData/Images/pp7.jpg';
 
 const DashBoard = () => {
+
+    const [images, setImages] = useState([Pp0, Pp1, Pp2, Pp3, Pp4, Pp5, Pp6, Pp7]);
+
     return (
         <SafeAreaView style={styles.page}>
 
             <View style={styles.story}>
 
                 <ScrollView style={{ flex: 1 }} horizontal showsHorizontalScrollIndicator={false}>
-
-
-                    <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
-                        <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp0} />
-                    </Pressable>
-
-                    <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
-                        <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp1} />
-                    </Pressable>
-
-                    <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
-                        <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp2} />
-                    </Pressable>
-
-                    <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
-                        <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp3} />
-                    </Pressable>
-
-                    <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
-                        <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp4} />
-                    </Pressable>
-
-                    <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
-                        <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp5} />
-                    </Pressable>
-
-                    <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
-                        <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp6} />
-                    </Pressable>
-
-                    <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
-                        <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp7} />
-                    </Pressable>
-
-
+                    {
+                        images.map((val, i) => {
+                            return (
+                                <StoryAvatar key={i} img={val} />
+                            )
+                        })
+                    }
                 </ScrollView>
 
             </View>
