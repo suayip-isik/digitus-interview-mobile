@@ -5,7 +5,7 @@ export default StyleSheet.create({
     container: {
         backgroundColor: Colors.white,
         width: '100%',
-        height: 350,
+        height: 400,
         marginTop: 20,
         alignSelf: 'center',
         borderTopRightRadius: 15,
@@ -46,6 +46,6 @@ export default StyleSheet.create({
     },
     innerContainer: {
         flexDirection: 'row',
-        flex: 1.5
+        flex: 2
     },
 })

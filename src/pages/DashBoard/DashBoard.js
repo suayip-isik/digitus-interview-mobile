@@ -31,15 +31,17 @@ const DashBoard = ({ navigation }) => {
             title: 'First Item',
             date: '',
             isLike: false,
-            onPress: () => navigation.navigate("CardDetail"),
+            totalLike: 50,
+            onPress: () => navigation.push("CardDetail"),
         },
         {
             id: '1',
             image: cp1,
             title: 'Second Item',
             date: '',
-            isLike: false,
-            onPress: () => navigation.navigate("CardDetail"),
+            isLike: true,
+            totalLike: 174,
+            onPress: () => navigation.push("CardDetail"),
         },
         {
             id: '2',
@@ -47,7 +49,8 @@ const DashBoard = ({ navigation }) => {
             title: 'Third Item',
             date: '',
             isLike: false,
-            onPress: () => navigation.navigate("CardDetail"),
+            totalLike: 6,
+            onPress: () => navigation.push("CardDetail"),
         },
     ];
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Pressable, Image } from 'react-native';
+import { Pressable } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -7,6 +7,8 @@ import Colors from './assets/Colors';
 import Icon from 'react-native-vector-icons/Ionicons';
 import IconFeather from 'react-native-vector-icons/Feather';
 import DigitusLogo from './assets/DigitusLogos/digitus.png';
+import CustomHeader from './components/CustomHeader';
+import TabbarIcon from './components/TabBarIcon';
 
 import Welcome from './pages/Welcome';
 import DashBoard from './pages/DashBoard';
@@ -23,9 +25,19 @@ export default function Router() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name='TabNavigatorPage' component={TabPage} options={{ headerShown: false }} />
         <Stack.Screen name='Welcome' component={Welcome} options={{ headerShown: false }} />
-        <Stack.Screen name='CardDetail' component={CardDetail} />
+        <Stack.Screen name='TabNavigatorPage' component={TabPage} options={{ headerShown: false }} />
+        <Stack.Screen name='CardDetail' component={CardDetail} options={({ navigation }) => ({
+          title: '',
+          headerBackground: () => <CustomHeader image={DigitusLogo} />,
+          headerLeft: () => {
+            return (
+              <Pressable onPress={() => navigation.goBack()}>
+                <Icon name='arrow-back' size={35} color={Colors.gray} />
+              </Pressable>
+            )
+          },
+        })} />
       </Stack.Navigator>
     </NavigationContainer>
   )
@@ -51,80 +63,29 @@ const TabPage = () => {
             </Pressable>
           )
         },
-        tabBarIcon: ({ focused }) => {
-          if (focused) {
-            return (<Icon name='home' size={20} color={Colors.black} />)
-          } else {
-            return (<Icon name='home-outline' size={20} color={Colors.black} />)
-          }
-        },
+        tabBarIcon: ({ focused }) => <TabbarIcon focused={focused} activeIcon={'home'} inActiveIcon={'home-outline'} />,
         headerTitle: '',
-        headerBackground: () => {
-          return (
-            <View style={{
-              alignItems: 'center',
-              justifyContent: 'flex-end',
-              flex: 1,
-              backgroundColor: Colors.white,
-
-              shadowColor: "#000",
-              shadowOffset: {
-                width: 0,
-                height: 1,
-              },
-              shadowOpacity: 0.22,
-              shadowRadius: 2.22,
-
-              elevation: 3,
-            }}>
-              <Image style={{ width: 100, height: 50 }} source={DigitusLogo} />
-            </View>
-          )
-        },
+        headerBackground: () => <CustomHeader image={DigitusLogo} />,
       }} />
       <Tab.Screen name='Read' component={Read} options={{
         tabBarActiveBackgroundColor: Colors.tabbarActiveBackgroundColor,
         tabBarInactiveBackgroundColor: Colors.white,
-        tabBarIcon: ({ focused }) => {
-          if (focused) {
-            return (<Icon name='book' size={20} color={Colors.black} />)
-          } else {
-            return (<Icon name='book-outline' size={20} color={Colors.black} />)
-          }
-        }
+        tabBarIcon: ({ focused }) => <TabbarIcon focused={focused} activeIcon={'book'} inActiveIcon={'book-outline'} />,
       }} />
       <Tab.Screen name='Me' component={Me} options={{
         tabBarActiveBackgroundColor: Colors.tabbarActiveBackgroundColor,
         tabBarInactiveBackgroundColor: Colors.white,
-        tabBarIcon: ({ focused }) => {
-          if (focused) {
-            return (<IconFeather name='users' size={20} color={Colors.black} />)
-          } else {
-            return (<IconFeather name='users' size={20} color={Colors.black} />)
-          }
-        }
+        tabBarIcon: ({ focused }) => <TabbarIcon focused={focused} activeIcon={'person'} inActiveIcon={'person-outline'} />,
       }} />
       <Tab.Screen name='Notification' component={Notification} options={{
         tabBarActiveBackgroundColor: Colors.tabbarActiveBackgroundColor,
         tabBarInactiveBackgroundColor: Colors.white,
-        tabBarIcon: ({ focused }) => {
-          if (focused) {
-            return (<Icon name='notifications' size={20} color={Colors.black} />)
-          } else {
-            return (<Icon name='notifications-outline' size={20} color={Colors.black} />)
-          }
-        }
+        tabBarIcon: ({ focused }) => <TabbarIcon focused={focused} activeIcon={'notifications'} inActiveIcon={'notifications-outline'} />,
       }} />
       <Tab.Screen name='Other' component={Other} options={{
         tabBarActiveBackgroundColor: Colors.tabbarActiveBackgroundColor,
         tabBarInactiveBackgroundColor: Colors.white,
-        tabBarIcon: ({ focused }) => {
-          if (focused) {
-            return (<Icon name='ios-list' size={20} color={Colors.black} />)
-          } else {
-            return (<Icon name='ios-list-outline' size={20} color={Colors.black} />)
-          }
-        }
+        tabBarIcon: ({ focused }) => <TabbarIcon focused={focused} activeIcon={'ios-list'} inActiveIcon={'ios-list-outline'} />
       }} />
     </Tab.Navigator>
   );
