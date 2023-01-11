@@ -24,5 +24,7 @@ export default StyleSheet.create({
     },
     contenView: {
         flex: 7.3,
+        paddingHorizontal: '3%',
+        paddingTop: '1%',
     }
 })
