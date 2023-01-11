@@ -26,7 +26,10 @@ const DashBoard = () => {
                     {
                         images.map((val, i) => {
                             return (
-                                <StoryAvatar key={i} img={val} />
+                                <StoryAvatar
+                                    onPress={() => { console.log(i + " nolu story açıldı") }}
+                                    key={i}
+                                    img={val} />
                             )
                         })
                     }
