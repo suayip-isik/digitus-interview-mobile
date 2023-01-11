@@ -4,4 +4,5 @@ export default {
     green: '#0a8754',
     dashboardHeaderIconColor: '#2a9d8f',
     tabbarActiveBackgroundColor: '#048345',
+    veryLightBlue: '#e0e0e0',
 }

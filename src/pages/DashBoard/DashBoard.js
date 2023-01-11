@@ -16,42 +16,47 @@ const DashBoard = () => {
     return (
         <SafeAreaView style={styles.page}>
 
-            <ScrollView style={styles.story} horizontal showsHorizontalScrollIndicator={false}>
+            <View style={styles.story}>
+
+                <ScrollView style={{ flex: 1 }} horizontal showsHorizontalScrollIndicator={false}>
 
 
-                <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
-                    <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp0} />
-                </Pressable>
+                    <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
+                        <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp0} />
+                    </Pressable>
 
-                <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
-                    <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp1} />
-                </Pressable>
+                    <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
+                        <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp1} />
+                    </Pressable>
 
-                <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
-                    <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp2} />
-                </Pressable>
+                    <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
+                        <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp2} />
+                    </Pressable>
 
-                <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
-                    <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp3} />
-                </Pressable>
+                    <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
+                        <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp3} />
+                    </Pressable>
 
-                <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
-                    <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp4} />
-                </Pressable>
+                    <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
+                        <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp4} />
+                    </Pressable>
 
-                <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
-                    <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp5} />
-                </Pressable>
+                    <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
+                        <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp5} />
+                    </Pressable>
 
-                <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
-                    <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp6} />
-                </Pressable>
+                    <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
+                        <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp6} />
+                    </Pressable>
 
-                <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
-                    <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp7} />
-                </Pressable>
+                    <Pressable style={{ flex: 1, width: 80, borderRadius: 40, backgroundColor: Colors.white, borderWidth: 2, borderColor: Colors.dashboardHeaderIconColor, marginLeft: 5, alignItems: 'center', justifyContent: 'center' }}>
+                        <Image style={{ width: 70, height: 70, borderRadius: 35 }} source={Pp7} />
+                    </Pressable>
 
-            </ScrollView>
+
+                </ScrollView>
+
+            </View>
 
             <View style={styles.contenView}></View>
 
