@@ -42,8 +42,10 @@ export default StyleSheet.create({
         fontSize: 32,
         paddingTop: 20,
         paddingLeft: 10,
+        flex: 1,
     },
     innerContainer: {
-
+        flexDirection: 'row',
+        flex: 1.5
     },
 })

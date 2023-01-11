@@ -11,8 +11,11 @@ const ListCard = ({ item, onPress }) => {
             </View>
             <View style={styles.contentContainer}>
                 <Text style={styles.title}>Enim ad minim</Text>
-                <View style={styles.innerContainer}>
 
+                <View style={styles.innerContainer}>
+                    <View style={{ flex: 1, backgroundColor: 'blue'}}></View>
+                    <View style={{ flex: 1, backgroundColor: 'green'}}></View>
+                    <View style={{ flex: 1, backgroundColor: 'red'}}></View>
                 </View>
             </View>
 
