@@ -8,7 +8,7 @@ export default StyleSheet.create({
         flex: 1,
         backgroundColor: Colors.white,
 
-        shadowColor: "#000",
+        shadowColor: Colors.black,
         shadowOffset: {
             width: 0,
             height: 1,

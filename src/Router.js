@@ -81,6 +81,11 @@ const TabPage = () => {
         tabBarActiveBackgroundColor: Colors.tabbarActiveBackgroundColor,
         tabBarInactiveBackgroundColor: Colors.white,
         tabBarIcon: ({ focused }) => <TabbarIcon focused={focused} activeIcon={'notifications'} inActiveIcon={'notifications-outline'} />,
+        tabBarBadge: 5,
+        tabBarBadgeStyle: {
+          backgroundColor: Colors.orange,
+          color: Colors.black
+        }
       }} />
       <Tab.Screen name='Other' component={Other} options={{
         tabBarActiveBackgroundColor: Colors.tabbarActiveBackgroundColor,

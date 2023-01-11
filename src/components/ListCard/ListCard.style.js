@@ -48,4 +48,21 @@ export default StyleSheet.create({
         flexDirection: 'row',
         flex: 2
     },
+    innerLeftContainer: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    innerCenterContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    innerRightContainer: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        flexDirection: 'row',
+    },
 })

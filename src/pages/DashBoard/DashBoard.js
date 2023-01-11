@@ -32,7 +32,7 @@ const DashBoard = ({ navigation }) => {
             date: '',
             isLike: false,
             totalLike: 50,
-            onPress: () => navigation.push("CardDetail"),
+            onPress: () => navigation.push("CardDetail", { image: cp0 }),
         },
         {
             id: '1',
@@ -41,7 +41,7 @@ const DashBoard = ({ navigation }) => {
             date: '',
             isLike: true,
             totalLike: 174,
-            onPress: () => navigation.push("CardDetail"),
+            onPress: () => navigation.push("CardDetail", { image: cp1 }),
         },
         {
             id: '2',
@@ -50,7 +50,7 @@ const DashBoard = ({ navigation }) => {
             date: '',
             isLike: false,
             totalLike: 6,
-            onPress: () => navigation.push("CardDetail"),
+            onPress: () => navigation.push("CardDetail", { image: cp2 }),
         },
     ];
 
@@ -63,7 +63,7 @@ const DashBoard = ({ navigation }) => {
                         images.map((val, i) => {
                             return (
                                 <StoryAvatar
-                                    onPress={() => { console.log(i + " nolu story açıldı") }}
+                                    onPress={() => { alert(i + " nolu story açıldı") }}
                                     key={i}
                                     img={val} />
                             )

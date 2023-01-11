@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import Colors from '../../assets/Colors';
 import styles from './ListCard.style';
 
-const ListCard = ({ item, onPress }) => {
+const ListCard = ({ item }) => {
     return (
         <Pressable style={styles.container} onPress={item.onPress}>
 
@@ -16,18 +16,18 @@ const ListCard = ({ item, onPress }) => {
 
                 <View style={styles.innerContainer}>
 
-                    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                    <View style={styles.innerLeftContainer}>
                         <View style={{ borderWidth: 1, borderColor: Colors.veryLightBlue, padding: 5, paddingHorizontal: 15, borderRadius: 15 }}>
                             <Text style={{ color: Colors.green, fontWeight: 'bold' }}>Dius aute</Text>
                         </View>
                     </View>
 
-                    <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+                    <View style={styles.innerCenterContainer}>
                         <Icon name='calendar-sharp' size={15} color={Colors.black} style={{ paddingLeft: 30 }} />
                         <Text style={{ paddingLeft: 7, fontSize: 16 }}>11.1.2023</Text>
                     </View>
 
-                    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'flex-end', flexDirection: 'row' }}>
+                    <View style={styles.innerRightContainer}>
                         <Text style={{ color: Colors.pink, fontSize: 16, fontWeight: 'bold', paddingRight: 5 }}>{item.totalLike}</Text>
                         <Icon name={item.isLike === true ? 'heart' : 'heart-outline'} size={20} color={Colors.pink} style={{ paddingRight: 20 }} />
                     </View>

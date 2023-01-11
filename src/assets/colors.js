@@ -7,4 +7,5 @@ export default {
     veryLightBlue: '#e0e0e0',
     pink: 'pink',
     gray: 'gray',
+    orange: 'orange',
 }
