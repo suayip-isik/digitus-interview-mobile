@@ -14,6 +14,7 @@ import Other from './pages/Other';
 import Notification from './pages/Notification';
 import Me from './pages/Me';
 import Read from './pages/Read';
+import CardDetail from './pages/CardDetail';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -22,8 +23,9 @@ export default function Router() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name='Welcome' component={Welcome} options={{ headerShown: false }} />
         <Stack.Screen name='TabNavigatorPage' component={TabPage} options={{ headerShown: false }} />
+        <Stack.Screen name='Welcome' component={Welcome} options={{ headerShown: false }} />
+        <Stack.Screen name='CardDetail' component={CardDetail} />
       </Stack.Navigator>
     </NavigationContainer>
   )

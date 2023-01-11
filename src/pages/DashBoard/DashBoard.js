@@ -20,7 +20,7 @@ import cp0 from '../../assets/DummyData/CardPhoto/cp0.jpeg'
 import cp1 from '../../assets/DummyData/CardPhoto/cp1.jpeg'
 import cp2 from '../../assets/DummyData/CardPhoto/cp2.jpeg'
 
-const DashBoard = () => {
+const DashBoard = ({ navigation }) => {
 
     const [images, setImages] = useState([Pp0, Pp1, Pp2, Pp3, Pp4, Pp5, Pp6, Pp7]);
 
@@ -31,6 +31,7 @@ const DashBoard = () => {
             title: 'First Item',
             date: '',
             isLike: false,
+            onPress: () => navigation.navigate("CardDetail"),
         },
         {
             id: '1',
@@ -38,6 +39,7 @@ const DashBoard = () => {
             title: 'Second Item',
             date: '',
             isLike: false,
+            onPress: () => navigation.navigate("CardDetail"),
         },
         {
             id: '2',
@@ -45,6 +47,7 @@ const DashBoard = () => {
             title: 'Third Item',
             date: '',
             isLike: false,
+            onPress: () => navigation.navigate("CardDetail"),
         },
     ];
 

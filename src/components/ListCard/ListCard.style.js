@@ -5,7 +5,7 @@ export default StyleSheet.create({
     container: {
         backgroundColor: Colors.white,
         width: '100%',
-        height: 300,
+        height: 350,
         marginTop: 20,
         alignSelf: 'center',
         borderTopRightRadius: 15,
@@ -35,5 +35,15 @@ export default StyleSheet.create({
     contentContainer: {
         flex: 1.3,
         backgroundColor: Colors.white,
-    }
+    },
+    title: {
+        color: '#0a8754',
+        fontWeight: 'bold',
+        fontSize: 32,
+        paddingTop: 20,
+        paddingLeft: 10,
+    },
+    innerContainer: {
+
+    },
 })
