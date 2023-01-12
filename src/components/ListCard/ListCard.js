@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Pressable, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import Colors from '../../assets/Colors';
+import Colors from '../../assets/colors.js';
 import styles from './ListCard.style';
 
 const ListCard = ({ item }) => {

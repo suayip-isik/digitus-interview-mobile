@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { View, ScrollView, SafeAreaView, Image, Pressable, Text, FlatList } from 'react-native'
-import Colors from '../../assets/Colors';
+import Colors from '../../assets/colors.js';
 import styles from './DashBoard.style';
 import StoryAvatar from '../../components/StoryAvatar';
 import ListCard from '../../components/ListCard';

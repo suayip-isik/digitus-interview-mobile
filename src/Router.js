@@ -3,7 +3,7 @@ import { Pressable } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Colors from './assets/Colors';
+import Colors from './assets/colors.js';
 import Icon from 'react-native-vector-icons/Ionicons';
 import IconFeather from 'react-native-vector-icons/Feather';
 import DigitusLogo from './assets/DigitusLogos/digitus.png';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, SafeAreaView, ScrollView, Text, View } from 'react-native';
-import Colors from '../../assets/Colors';
+import Colors from '../../assets/colors.js';
 import styles from './CardDetail.style';
 
 

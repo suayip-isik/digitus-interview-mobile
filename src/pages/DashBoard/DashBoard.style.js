@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import Colors from "../../assets/Colors";
+import Colors from "../../assets/colors.js";
 
 export default StyleSheet.create({
     page: {

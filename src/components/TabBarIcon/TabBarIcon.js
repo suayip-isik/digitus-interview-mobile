@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './TabBarIcon.style';
-import Colors from '../../assets/Colors';
+import Colors from '../../assets/colors.js';
 
 const TabbarIcon = ({ focused, activeIcon, inActiveIcon }) => {
     if (focused) {
