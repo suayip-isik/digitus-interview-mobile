@@ -8,4 +8,5 @@ export default {
     pink: 'pink',
     gray: 'gray',
     orange: 'orange',
+    
 }
